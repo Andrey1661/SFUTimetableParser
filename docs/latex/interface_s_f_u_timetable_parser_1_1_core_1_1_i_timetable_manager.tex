@@ -1,0 +1,93 @@
+\hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager}{}\section{Интерфейс S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager}
+\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager}\index{S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager}}
+Граф наследования\+:S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_f_u_timetable_parser_1_1_core_1_1_entities_1_1_group_timetable}{Group\+Timetable} \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aeb182ac554490f3c0db80691c1a8f739}{Get\+Group\+Timetable} (string group\+Name)
+\begin{DoxyCompactList}\small\item\em Возвращает расписание заданной группы \end{DoxyCompactList}\item 
+Task \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a4bc85e98ca57c83c9fa433036f064016}{Load\+Data\+Async} ()
+\end{DoxyCompactItemize}
+\subsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerable$<$ \hyperlink{class_s_f_u_timetable_parser_1_1_core_1_1_entities_1_1_group_timetable}{Group\+Timetable} $>$ \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_ac092d73b1bfbbc5b5f1f50cb2234d622}{Timetable}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+I\+Enumerable$<$ string $>$ \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a9902fba6fdbe6a7050bd0ec81c6f0639}{Institutes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+I\+Enumerable$<$ string $>$ \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aa783c9659f88b59d3d5e97a91eb0764c}{Subjects}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+I\+Enumerable$<$ string $>$ \hyperlink{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_af5f2f109ae2194ec9737a0d5242579f0}{Groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Основной интерфейс, содержащий методы и свойства для работы с расписанием 
+
+\subsection{Методы}
+\mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aeb182ac554490f3c0db80691c1a8f739}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aeb182ac554490f3c0db80691c1a8f739}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Get\+Group\+Timetable@{Get\+Group\+Timetable}}
+\index{Get\+Group\+Timetable@{Get\+Group\+Timetable}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Group\+Timetable()}{GetGroupTimetable()}}
+{\footnotesize\ttfamily \hyperlink{class_s_f_u_timetable_parser_1_1_core_1_1_entities_1_1_group_timetable}{Group\+Timetable} S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Get\+Group\+Timetable (\begin{DoxyParamCaption}\item[{string}]{group\+Name }\end{DoxyParamCaption})}
+
+
+
+Возвращает расписание заданной группы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Название} & группы \\
+\hline
+\end{DoxyParams}
+
+
+Замещается в \hyperlink{class_s_f_u_timetable_parser_1_1_implementation_1_1_timetable_manager_a23e17cd28ece08c67288e569380c9602}{S\+F\+U\+Timetable\+Parser.\+Implementation.\+Timetable\+Manager}.
+
+\mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a4bc85e98ca57c83c9fa433036f064016}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a4bc85e98ca57c83c9fa433036f064016}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Load\+Data\+Async@{Load\+Data\+Async}}
+\index{Load\+Data\+Async@{Load\+Data\+Async}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Load\+Data\+Async()}{LoadDataAsync()}}
+{\footnotesize\ttfamily Task S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Load\+Data\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Асинхронный метод, используемы для загрузки данных с сафта СФУ 
+
+Замещается в \hyperlink{class_s_f_u_timetable_parser_1_1_implementation_1_1_timetable_manager_a68266c332dfb29c133aaa36afd29385f}{S\+F\+U\+Timetable\+Parser.\+Implementation.\+Timetable\+Manager}.
+
+
+
+\subsection{Полный список свойств}
+\mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_af5f2f109ae2194ec9737a0d5242579f0}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_af5f2f109ae2194ec9737a0d5242579f0}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Groups@{Groups}}
+\index{Groups@{Groups}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Groups}{Groups}}
+{\footnotesize\ttfamily I\+Enumerable$<$string$>$ S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Groups\hspace{0.3cm}{\ttfamily [get]}}
+
+Свойство, возвращающее список групп \mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a9902fba6fdbe6a7050bd0ec81c6f0639}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_a9902fba6fdbe6a7050bd0ec81c6f0639}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Institutes@{Institutes}}
+\index{Institutes@{Institutes}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Institutes}{Institutes}}
+{\footnotesize\ttfamily I\+Enumerable$<$string$>$ S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Institutes\hspace{0.3cm}{\ttfamily [get]}}
+
+Свойство, возвращающее список институтов \mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aa783c9659f88b59d3d5e97a91eb0764c}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_aa783c9659f88b59d3d5e97a91eb0764c}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Subjects@{Subjects}}
+\index{Subjects@{Subjects}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Subjects}{Subjects}}
+{\footnotesize\ttfamily I\+Enumerable$<$string$>$ S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Subjects\hspace{0.3cm}{\ttfamily [get]}}
+
+Свойство, возвращающее список предметов \mbox{\Hypertarget{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_ac092d73b1bfbbc5b5f1f50cb2234d622}\label{interface_s_f_u_timetable_parser_1_1_core_1_1_i_timetable_manager_ac092d73b1bfbbc5b5f1f50cb2234d622}} 
+\index{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}!Timetable@{Timetable}}
+\index{Timetable@{Timetable}!S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager@{S\+F\+U\+Timetable\+Parser\+::\+Core\+::\+I\+Timetable\+Manager}}
+\subsubsection{\texorpdfstring{Timetable}{Timetable}}
+{\footnotesize\ttfamily I\+Enumerable$<$\hyperlink{class_s_f_u_timetable_parser_1_1_core_1_1_entities_1_1_group_timetable}{Group\+Timetable}$>$ S\+F\+U\+Timetable\+Parser.\+Core.\+I\+Timetable\+Manager.\+Timetable\hspace{0.3cm}{\ttfamily [get]}}
+
+Свойство, возвращающее список моделей распиания всех групп 
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+S\+F\+U\+Timetable\+Parser.\+Core/\hyperlink{_i_timetable_manager_8cs}{I\+Timetable\+Manager.\+cs}\end{DoxyCompactItemize}
