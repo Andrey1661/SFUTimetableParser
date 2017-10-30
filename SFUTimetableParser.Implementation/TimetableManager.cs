@@ -9,60 +9,76 @@ using SFUTimetableParser.Core.Entities;
 
 namespace SFUTimetableParser.Implementation
 {
-    /**
-     * Реализация основного интерфейса для работы с раписанием
-     */
+    /// <summary>
+    /// Реализация основного интерфейса для работы с раписанием
+    /// </summary>
+    /// <seealso cref="SFUTimetableParser.Core.ITimetableManager" />
     public class TimetableManager : ITimetableManager
     {
-        /// Ссылка на сайт СФУ
+        /// <summary>
+        /// Ссылка на сайт СФУ, с которого считывается расписание
+        /// </summary>
         private const string Link = "http://edu.sfu-kras.ru/timetable";
 
+        /// <summary>
+        /// Контекст для работы с HTML-документами
+        /// </summary>
         private readonly IBrowsingContext _context;
 
+        /// <summary>
+        /// Основной документ
+        /// </summary>
         private IDocument _document;
+
+        /// <summary>
+        /// Документ с расписанием определенной группы
+        /// </summary>
         private IDocument _groupDocument;
 
-        /**
-         * Свойство, возвращающее список моделей распиания всех групп
-         */
+        /// <summary>
+        /// Возвращает список моделей распиания всех групп
+        /// </summary>
         public IEnumerable<GroupTimetable> Timetable { get; private set; }
 
-        /**
-         * Свойство, возвращающее список предметов
-         */
+        /// <summary>
+        /// Возвращает список предметов
+        /// </summary>
         public IEnumerable<string> Subjects { get; private set; }
 
-        /**
-         * Свойство, возвращающее список групп
-         */
+        /// <summary>
+        /// Возвращает список групп
+        /// </summary>
         public IEnumerable<string> Groups { get; private set; }
 
-        /**
-         * Свойство, возвращающее список институтов
-         */
+        /// <summary>
+        /// Возвращает список институтов
+        /// </summary>
         public IEnumerable<string> Institutes { get; private set; }
 
-        /**
-         * Стандартный конструктор
-         */
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="TimetableManager"/>
+        /// </summary>
         public TimetableManager()
         {
             var config = Configuration.Default.WithDefaultLoader();
             _context = BrowsingContext.New(config);
         }
 
-        /**
-         * \brief Возвращает расписание заданной группы
-         * \param Название группы
-         */
+        /// <summary>
+        /// Возвращает расписание заданной группы
+        /// </summary>
+        /// <param name="groupName">Название группы</param>
+        /// <returns>
+        /// Модель расписания группы
+        /// </returns>
         public GroupTimetable GetGroupTimetable(string groupName)
         {
             throw new NotImplementedException();
         }
 
-        /**
-         * Асинхронный метод, используемы для загрузки данных с сафта СФУ
-         */
+        /// <summary>
+        /// Асинхронно устанавливает соединение с сайтом СФУ и загружает данные
+        /// </summary>
         public async Task LoadDataAsync()
         {
             if (_document == null)
@@ -84,9 +100,10 @@ namespace SFUTimetableParser.Implementation
             var timetable = await LoadGroupTimetableAsync("ки14-17б");
         }
 
-        /**
-         * На основе загруженного документа формирует список групп СФУ
-         */
+        /// <summary>
+        /// На основе загруженного документа формирует список групп СФУ
+        /// </summary>
+        /// <returns>СПисок групп</returns>
         private IEnumerable<string> LoadGroupList()
         {
             string selector = "div.collapsed-block ul li > a";
@@ -95,9 +112,10 @@ namespace SFUTimetableParser.Implementation
             return cells.Select(t => t.TextContent).ToList();
         }
 
-        /**
-         * На основе загруженного документа формирует список институтов СФУ
-         */
+        /// <summary>
+        ///  На основе загруженного документа формирует список институтов СФУ
+        /// </summary>
+        /// <returns>Список институтов</returns>
         private IEnumerable<string> LoadInstitutesList()
         {
             string selector = "section > ul > li > div.collapsed-block > a > span";
@@ -106,10 +124,11 @@ namespace SFUTimetableParser.Implementation
             return cells.Select(t => t.TextContent).ToList();
         }
 
-        /**
-         * \brief Асинхронный метод, формирующий расписание группы с заданным названием
-         * \param groupName Название группы
-         */
+        /// <summary>
+        /// Асинхронный метод, формирующий расписание группы с заданным названием
+        /// </summary>
+        /// <param name="groupName">Название группы</param>
+        /// <returns>Модель расписания заданной группы</returns>
         private async Task<GroupTimetable> LoadGroupTimetableAsync(string groupName)
         {
             string linkToGroup = $"{Link}?group={groupName}";

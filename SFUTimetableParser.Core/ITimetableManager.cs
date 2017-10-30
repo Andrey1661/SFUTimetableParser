@@ -8,40 +8,41 @@ using SFUTimetableParser.Core.Entities;
 
 namespace SFUTimetableParser.Core
 {
-    /**
-     * Основной интерфейс, содержащий методы и свойства для работы с расписанием
-     */
+    /// <summary>
+    /// Основной интерфейс, содержащий методы и свойства для работы с расписанием
+    /// </summary>
     public interface ITimetableManager
     {
-        /**
-         * Свойство, возвращающее список моделей распиания всех групп
-         */
+        /// <summary>
+        /// Свойство, возвращающее список моделей распиания всех групп
+        /// </summary>
         IEnumerable<GroupTimetable> Timetable { get; }
 
-        /**
-         * Свойство, возвращающее список институтов
-         */
+        /// <summary>
+        /// Свойство, возвращающее список институтов
+        /// </summary>
         IEnumerable<string> Institutes { get; }
 
-        /**
-         * Свойство, возвращающее список предметов
-         */
+        /// <summary>
+        /// Свойство, возвращающее список предметов
+        /// </summary>
         IEnumerable<string> Subjects { get; }
 
-        /**
-         * Свойство, возвращающее список групп
-         */
+        /// <summary>
+        /// Свойство, возвращающее список групп
+        /// </summary>
         IEnumerable<string> Groups { get; }
 
-        /**
-         * \brief Возвращает расписание заданной группы
-         * \param Название группы
-         */
+        /// <summary>
+        /// Возвращает расписание заданной группы
+        /// </summary>
+        /// <param name="groupName">Название группы</param>
+        /// <returns>Модель расписания группы</returns>
         GroupTimetable GetGroupTimetable(string groupName);
 
-        /**
-         * Асинхронный метод, используемы для загрузки данных с сафта СФУ
-         */
+        /// <summary>
+        /// Асинхронно устанавливает соединение с сайтом СФУ и загружает данные
+        /// </summary>
         Task LoadDataAsync();
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SFUTimetableParser.Core.Entities
 {
-    /**
-     * Список дней недели
-     */
+    /// <summary>
+    /// Перечисление, соответствующее дням недели
+    /// </summary>
     public enum DaysOfWeek
     {
         Monday = 0,

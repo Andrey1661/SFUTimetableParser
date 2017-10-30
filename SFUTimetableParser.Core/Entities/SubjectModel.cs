@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace SFUTimetableParser.Core.Entities
 {
-    /**
-     * Модель предмета в расписании
-     */
+    /// <summary>
+    /// Модель учебного предмета
+    /// </summary>
     public class SubjectModel
     {
-        /// Название
+        /// <summary>
+        /// Возвращает или задает название предмета
+        /// </summary>
         public string Name { get; set; }
 
-        /// Тип (лекция или практика)
+        /// <summary>
+        /// Возвращает или задает вид занятию (лекция | практика)
+        /// </summary>
         public string Type { get; set; }
 
-        /// Аудитория
+        /// <summary>
+        /// Возвращает или задает аудиторию
+        /// </summary>
         public string Auditory { get; set; }
 
-        /// Модель преподавателя
+        /// <summary>
+        /// Возвращает или задает преподавателя
+        /// </summary>
         public Professor Professor { get; set; }
     }
 }

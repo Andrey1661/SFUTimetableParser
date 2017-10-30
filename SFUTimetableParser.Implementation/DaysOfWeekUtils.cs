@@ -4,17 +4,19 @@ using SFUTimetableParser.Core.Entities;
 
 namespace SFUTimetableParser.Implementation
 {
-    /** 
-     * Содержит вспомогательные методы для работы с перечислением DaysOfWeek
-     */
+    /// <summary>
+    /// Содержит вспомогательные методы для работы с перечислением <see cref="DaysOfWeek"/>
+    /// </summary>
     public static class DaysOfWeekUtils
     {
-        /** 
-         * \brief Возвращает объект перечисления DaysOfWeek по его названию
-         * \param day Название дня недели на русском или английском языке
-         * \return Объект перечисления, соответствующий названию
-         * \throw InvalidDayOfWeekException Выбрасывается, если переданный аргумент не соотвествует ни одному объекту перечисления
-         */
+        /// <summary>
+        /// Возвращает объект перечисления <see cref="DaysOfWeek"/> по его названию
+        /// </summary>
+        /// <param name="day">Название дня недели (на русском или английском)</param>
+        /// <returns>Объект перечисления, соответствующий названию</returns>
+        /// <exception cref="InvalidDayOfWeekException">
+        /// Выбрасывается, если переданный аргумент не соотвествует ни одному объекту перечисления
+        /// </exception>
         public static DaysOfWeek GetDayFromString(string day)
         {
             day = day.ToLower();
